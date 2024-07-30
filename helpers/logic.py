@@ -3,10 +3,10 @@ from . models import OpenAiCostEstimator, AnthropicCostEstimator, CostEstimatorC
 import logging 
 
 class LlmCostEstimator:
-    def __init__(self):
+    def __init__(self, logging_level: logging):
         self.current_cost = 0
         logging.basicConfig(
-            level=logging.INFO,
+            level=logging_level,
             format="%(asctime)s %(levelname)s %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S",
         )
@@ -32,10 +32,10 @@ class LlmCostEstimator:
             
             self.current_cost += total_cost
             
-            logging.info(estimator_config.llm_provider)
-            logging.info(f"input/output tokens: {input_tokens}/{output_tokens}")
-            logging.info(f"Cost of this post: $ {total_cost}")
-            logging.info(f"Accumulated cost:  $ {self.current_cost}\n\n")
+            logging.debug(estimator_config.llm_provider)
+            logging.debug(f"input/output tokens: {input_tokens}/{output_tokens}")
+            logging.debug(f"Cost of this post: $ {total_cost}")
+            logging.debug(f"Accumulated cost:  $ {self.current_cost}\n\n")
             
             return self.current_cost
         except Exception as e:
@@ -64,7 +64,13 @@ class LlmCostEstimator:
         return input_tokens, output_tokens
     
     def __set_pricing(self, estimator_config: CostEstimatorConfig):
-        input_pricing = OpenAiCostEstimator.pricing[estimator_config.model].input_pricing
-        output_pricing = OpenAiCostEstimator.pricing[estimator_config.model].output_pricing
+        
+        if estimator_config.llm_provider == "openai":
+            EstimatorInstance = OpenAiCostEstimator
+        if estimator_config.llm_provider == "claude":
+            EstimatorInstance = AnthropicCostEstimator
+            
+        input_pricing = EstimatorInstance.pricing[estimator_config.model].input_pricing
+        output_pricing = EstimatorInstance.pricing[estimator_config.model].output_pricing
         
         return input_pricing, output_pricing

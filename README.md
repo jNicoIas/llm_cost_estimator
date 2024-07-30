@@ -1,11 +1,12 @@
 # LLM Cost Estimator
 ![Static Badge](https://img.shields.io/badge/Python-306998)
-![Static Badge](https://img.shields.io/badge/Modularization-49afcd)
-![Static Badge](https://img.shields.io/badge/OOP-5e8d87)
-![Static Badge](https://img.shields.io/badge/LLM-5a9d55)
-![Static Badge](https://img.shields.io/badge/GenAI-9d55a3)
-![Static Badge](https://img.shields.io/badge/LLMbudgeting-cd5c5c)
-![Static Badge](https://img.shields.io/badge/Logging-f9d71c)
+![Static Badge](https://img.shields.io/badge/Modularization-007ec6)
+![Static Badge](https://img.shields.io/badge/OOP-0057b7)
+![Static Badge](https://img.shields.io/badge/Logging-004488)
+![Static Badge](https://img.shields.io/badge/Pydantic-003366)
+![Static Badge](https://img.shields.io/badge/LLM-306998)
+![Static Badge](https://img.shields.io/badge/GenAI-007ec6)
+![Static Badge](https://img.shields.io/badge/LLMbudgeting-306998)
 
 
 

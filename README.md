@@ -1,4 +1,4 @@
-# LLM Cost Estimator
+# LLM Cost Estimator 💸
 ![Static Badge](https://img.shields.io/badge/Python-306998)
 ![Static Badge](https://img.shields.io/badge/Modularization-007ec6)
 ![Static Badge](https://img.shields.io/badge/OOP-0057b7)

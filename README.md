@@ -1,4 +1,16 @@
 # LLM Cost Estimator
+![Static Badge](https://img.shields.io/badge/Python-306998)
+![Static Badge](https://img.shields.io/badge/Modularization-49afcd)
+![Static Badge](https://img.shields.io/badge/OOP-5e8d87)
+![Static Badge](https://img.shields.io/badge/LLM-5a9d55)
+![Static Badge](https://img.shields.io/badge/GenAI-9d55a3)
+![Static Badge](https://img.shields.io/badge/LLMbudgeting-cd5c5c)
+![Static Badge](https://img.shields.io/badge/Logging-f9d71c)
+
+
+
+
+
 
 Welcome to the LLM Cost Estimator repository! This package is designed to help you keep track of the costs associated with using large language models (LLMs) for your projects. By applying this package, you can calculate the running cost of LLM usage per project or feature and store the output in a database for further analysis and budgeting.
 
@@ -31,10 +43,3 @@ cost2 = llm_cost_estimator.update_current_cost(config)
 config = CostEstimatorConfig(input_tokens=8, output_tokens= 8, model= 'claude-3.5-sonnet', llm_provider='claude', service='sause', is_input_str=False)
 cost3 = llm_cost_estimator.update_current_cost(config)
 ```
-
-
-## Python Concepts Applied:
-- Modularization
-- OOP
-- Basemodel
-- Logging

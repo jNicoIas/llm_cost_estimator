@@ -6,7 +6,7 @@ class LlmCostEstimator:
     def __init__(self):
         self.current_cost = 0
         logging.basicConfig(
-            level=logging.ERROR,
+            level=logging.INFO,
             format="%(asctime)s %(levelname)s %(message)s",
             datefmt="%Y-%m-%d %H:%M:%S",
         )
@@ -35,7 +35,7 @@ class LlmCostEstimator:
             logging.info(estimator_config.llm_provider)
             logging.info(f"input/output tokens: {input_tokens}/{output_tokens}")
             logging.info(f"Cost of this post: $ {total_cost}")
-            logging.info(f"Accumulated cost:  $ {self.current_cost}")
+            logging.info(f"Accumulated cost:  $ {self.current_cost}\n\n")
             
             return self.current_cost
         except Exception as e:

@@ -32,3 +32,10 @@ print('==')
 config = CostEstimatorConfig(input_tokens=8, output_tokens= 8, model= 'gpt-4o', llm_provider='openai', service='sause', is_input_str=False)
 cost3 = llm_cost_estimator.update_current_cost(config)
 ```
+
+
+## Python Concepts Applied:
+- Modularization
+- OOP
+- Basemodel
+- Logging
